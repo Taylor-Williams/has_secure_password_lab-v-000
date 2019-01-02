@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  has_secure_password
   def new
 
   end
@@ -6,6 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(name: params[:name])
     smth = @user.authenticate if @user.valid?
+    if smth
   end
 
   def show
