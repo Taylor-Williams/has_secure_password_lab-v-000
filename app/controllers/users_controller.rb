@@ -6,8 +6,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(name: params[:name])
-    smth = @user.authenticate if @user.valid?
-    if smth
   end
 
   def show
