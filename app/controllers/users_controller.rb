@@ -5,8 +5,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(name: params[:name])
-    if self.password_confirmation
-      self.password_confirmation == self.password
+    smth = @user.authenticate if @user.valid?
   end
 
   def show
