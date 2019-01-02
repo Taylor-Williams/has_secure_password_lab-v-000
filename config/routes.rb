@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get '/users/new' => 'users#new'
-  get '/users/:id' => 'users#show'
+  get '/users/:id' => 'users#show', as: :user_path
   post '/users' => 'users#create'
   post '/login' => 'sessions#create'
 
