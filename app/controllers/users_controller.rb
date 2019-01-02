@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.valid?
       redirect_to user_path(@user)
     else
-      redirect_to users_new
+      redirect_to users_new_path
     end
   end
 
