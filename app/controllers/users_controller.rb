@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    @user.valid? ? redirect_to user_path(@user) : 
+    @user.valid? ? redirect_to user_path(@user) : redirect_to users_new
   end
 
   def show
